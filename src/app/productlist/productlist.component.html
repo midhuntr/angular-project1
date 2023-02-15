@@ -1,0 +1,30 @@
+<p>all products</p>
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let p of products">
+    
+    
+            <div class="card" style="width: 18rem;">
+                <img src="{{p.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{p.name}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{p.price}}</li>
+                  
+                </ul>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{p.category}}</li>
+                  
+                </ul>
+                <div class="card-body">
+                  <input type="submit" value="view more" class="btn btn-info" (click)="redirectToProductDetail(p.id)">
+                </div>
+              </div>
+    
+    
+        </div>
+        
+    </div>
+    
+</div>

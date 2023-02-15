@@ -1,0 +1,11 @@
+<div class="card text-center">
+  <div class="card-header">
+    Reviews
+  </div>
+  <div class="card-body">
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let r of reviews">{{r.comment}} by {{r.user}} rating:{{r.rating}}</li>
+      </ul>
+  </div>
+  
+</div>

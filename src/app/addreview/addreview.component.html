@@ -1,0 +1,19 @@
+<div>
+    <h2>add your review</h2>
+    <form action="" [formGroup]="reviewForm" (ngSubmit)="postReview()">
+        <div class="mb-3">
+            <input type="text" placeholder="enter your review" class="form-control" formControlName="comment">
+            <div class="form-text text-danger" *ngIf="comment && comment.invalid && comment.touched">invalid comment</div>
+
+        </div>
+        <div class="mb-3">
+            <input type="text" placeholder="enter your rating" class="form-control" formControlName="rating">
+            <div class="form-text text-danger" *ngIf="rating && rating.invalid && rating.touched">invalid rating</div>
+
+        </div>
+        <div class="mb-3">
+            <input type="submit"  class="form-control" value="add" [disabled]="reviewForm.invalid">
+        </div>
+    
+    </form>
+</div>

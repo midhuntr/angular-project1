@@ -1,0 +1,25 @@
+<p>register works!</p>
+
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <form action="" (ngSubmit)="signup()" [formGroup]="form">
+            <div class="mb-3 ">
+                <input type="text" placeholder="username" formControlName="username">
+                <div class="text-danger form-text " *ngIf="username && username.invalid && username.touched"> username field invalid</div>
+            </div>
+            <div class="mb-3">
+                <input type="text" placeholder="email" formControlName="email">
+                <div class="text-danger form-text" *ngIf="email && email.invalid && email.touched"> email field invalid</div>
+            </div>
+            <div class="mb-3">
+                <input type="text" placeholder="password" formControlName="password">
+                <div class="text-danger form-text" *ngIf="password && password.invalid && password.touched">password invalid</div>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="signup" [disabled]="form.invalid">
+            </div>
+        </form>
+    </div>
+    <div class="col-4"></div>
+</div>
